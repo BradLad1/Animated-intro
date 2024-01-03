@@ -1,42 +1,47 @@
 body {
     background-color: rgb(214, 236, 255);
+    overflow: hidden;
 }
 
 /* This is the first section for the square moving */
-
 #Move-Out-The-Square {
     animation: P-Pushing-out-the-box 2s alternate;
     animation-iteration-count: 1;
     position: absolute;
-    left: 5px;
     top: 120px;
     color: rebeccapurple;
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
+
 }
 
 #AnimationSquare {
     border: 1.2px solid black;
-    width: 420px;
+    width: 560px;
     height: 300px;
     position: absolute;
-    top: 230px;
-    left: 500px;
     background-color: white;
-    animation: move-forward 2s;
+    animation: move-forward 1s normal;
     animation-iteration-count: 1;
-    animation-delay: 3s;
-    backface-visibility: hidden;
+    animation-delay: 0.9s;
+    animation-fill-mode: both;
 }
 
-@keyframes P-Pushing-out-the-box {
-    0% { left: 5px; }
-    20% { left: 285px; }
-    100%{left: 5px;}
 
+/*Animation section*/
+@keyframes P-Pushing-out-the-box {
+    0% { left: 100px; }
+    35% { left: 20px; }
+    55% { left: 492px; }
+    100% { left: 100px; }
 }
 
 @keyframes move-forward {
-    0% { left: 500px; }
-    50% { left: 650px; }
-    100%{ left: 500px;}
-}
+    0% { left: 430px;     top: 230px;
+    }
+     90% { left: 1070px; transform: rotate(360deg); }
+     100% { top: 900px; }
+ }
+ 
+
+
+/*Animation section*/
