@@ -1,47 +1,93 @@
 body {
-    background-color: rgb(214, 236, 255);
-    overflow: hidden;
+    background-color:none;
+    height: 1400px;
+}
+
+h1{
+    position: absolute;
+    left: 620px;
 }
 
 /* This is the first section for the square moving */
-#Move-Out-The-Square {
-    animation: P-Pushing-out-the-box 2s alternate;
-    animation-iteration-count: 1;
-    position: absolute;
-    top: 120px;
-    color: rebeccapurple;
-    animation-fill-mode: both;
 
-}
+
+
+/*These lines are used to create box that will open up for the logo*/
 
 #AnimationSquare {
-    border: 1.2px solid black;
-    width: 560px;
-    height: 300px;
+  
+
+    width: 453.2px;
+    height: 8px;
+    background-color: rgb(0, 0, 0);
     position: absolute;
-    background-color: white;
-    animation: move-forward 1s normal;
-    animation-iteration-count: 1;
-    animation-delay: 0.9s;
-    animation-fill-mode: both;
+    top: 124.8px;
+    right: 456px;
 }
 
+
+
+#AnimationSquare-2 {
+
+
+    width: 453px;
+    height: 8px;
+    background-color: rgb(225, 41, 41);
+    position: absolute;
+    top: 715px;
+    right: 456px;
+}
+
+#AnimationSquare-3 {
+   
+
+
+    width: 597px;
+    height: 8px;
+    background-color: rgb(213, 119, 32);
+    position: absolute;
+    top: 420px;
+    right: 160px;
+    transform: rotate(90deg);
+}
+
+#AnimationSquare-4 {
+
+
+    width: 598px;
+    height: 8px;
+    background-color: rgb(62, 232, 40);
+    position: absolute;
+    bottom: 351px;
+    right: 606px;
+    transform: rotate(270deg);
+
+}
+/*These lines are used to create box that will open up for the logo*/
+
+audio{
+   position: absolute;
+   top: 500px;;
+   left: 1250px;
+}
+
+.move-up{
+    margin-top: 3%;
+    margin-left: 40%;
+    margin-right: 5%;
+    /*This is used to position the form e.g username and password form so essteinaly everything in the login box*/;
+}
+
+
+
+#img-size{
+    transform: scale(0.2,0.2);
+}
 
 /*Animation section*/
-@keyframes P-Pushing-out-the-box {
-    0% { left: 100px; }
-    35% { left: 20px; }
-    55% { left: 492px; }
-    100% { left: 100px; }
-}
+@keyframes ChangeNOW {
 
-@keyframes move-forward {
-    0% { left: 430px;     top: 230px;
-    }
-     90% { left: 1070px; transform: rotate(360deg); }
-     100% { top: 900px; }
- }
- 
+}
 
 
 /*Animation section*/
