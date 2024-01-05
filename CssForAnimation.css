@@ -1,6 +1,9 @@
 body {
     background-color:none;
     overflow: hidden;
+    animation: Turn-green 8s  alternate;
+    animation-fill-mode: forwards;
+ 
    
 }
 
@@ -44,8 +47,8 @@ body {
     top: 715px;
     right: 456px;
     
-    animation: AnimationLine2 6s alternate;
-
+    animation: AnimationLine2 3s alternate;
+   
 }
 
 #AnimationSquare-3 {
@@ -55,7 +58,7 @@ body {
     position: absolute;
     top: 125px;
     right: 456px;
-animation: AnimationLine4 5s normal;
+    animation: AnimationLine4 6.5s normal;
 }
 
 #AnimationSquare-4 {
@@ -74,17 +77,19 @@ animation: AnimationLine4 5s normal;
 /*These lines are used to create box that will open up for the logo*/
 
 audio{
-    padding: -23px;
    position: absolute;
-   top: 610px;;
-   left: 1350px;
+   top: 580px;;
+   left: 1450px;
+   animation: audioplayer 2s alternate;
+   animation-delay: 2s;
+   animation-fill-mode: forwards;
 }
 
 .move-up{
     margin-top: 55%;
     margin-left: 39.5%;
-  animation: input-form 3s normal; /*This animation plays 2st*/
-  animation-delay: 0.8s;
+  animation: input-form 2s alternate; /*This animation plays 2st*/
+  animation-delay: 0.1s;
 animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
@@ -118,7 +123,7 @@ animation-timing-function: ease-in;
 
 @keyframes input-form {
     from{margin-top: 55%;}
-    to{margin-top: 27%;}
+    to{margin-top: 27%; margin-left: 38.9%;}
         /*This animation plays 3rd*/
 }
 
@@ -131,7 +136,7 @@ animation-timing-function: ease-in;
 
 @keyframes AnimationLine3 {
     0%{top: 125px; }
-    50%{top: 438px;  margin-left: 20px; /* Adjust the margin to decrease width in the opposite direction */
+    50%{top: 438px;   /* Adjust the margin to decrease width in the opposite direction */
     }
     100%{top: 125px;}
 
@@ -144,9 +149,19 @@ animation-timing-function: ease-in;
     100%{left:402px}
 }
 
-@keyframes AnimationLine4 {
+@keyframes     AnimationLine4 
+{
     0%{top: 125px;}
-    100%{top: -85;}
+    50%{top: -85px;}
+    100%{top:125px}
+}
+@keyframes audioplayer {
+    from{left:1350px;}
+    to {left:610px;}
 }
 
+@keyframes Turn-green {
+    from{background-color: none;}
+    to{background-color: green;}
+}
 /*Animation section*/
