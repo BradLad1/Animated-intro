@@ -1,11 +1,16 @@
 body {
     background-color:none;
-    height: 1400px;
+    overflow: hidden;
+   
 }
 
-h1{
+#aniH1{
     position: absolute;
+    top:-40px;
     left: 620px;
+    animation: AniH1 2s normal;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
 }
 
 /* This is the first section for the square moving */
@@ -15,7 +20,6 @@ h1{
 /*These lines are used to create box that will open up for the logo*/
 
 #AnimationSquare {
-  
 
     width: 453.2px;
     height: 8px;
@@ -23,6 +27,9 @@ h1{
     position: absolute;
     top: 124.8px;
     right: 456px;
+    animation:  AnimationLine1  4.5s alternate; /*This animation plays 1st*/
+
+    animation-fill-mode: backwards;
 }
 
 
@@ -36,58 +43,110 @@ h1{
     position: absolute;
     top: 715px;
     right: 456px;
+    
+    animation: AnimationLine2 6s alternate;
+
 }
 
 #AnimationSquare-3 {
-   
-
-
-    width: 597px;
-    height: 8px;
+    width: 8px;
+    height: 595px;
     background-color: rgb(213, 119, 32);
     position: absolute;
-    top: 420px;
-    right: 160px;
-    transform: rotate(90deg);
+    top: 125px;
+    right: 456px;
+animation: AnimationLine4 5s normal;
 }
 
 #AnimationSquare-4 {
 
 
-    width: 598px;
-    height: 8px;
+    width: 8px;
+    height: 598px;
     background-color: rgb(62, 232, 40);
     position: absolute;
-    bottom: 351px;
-    right: 606px;
-    transform: rotate(270deg);
+    top: 125px;
+    right: 906px;
+    animation: AnimationLine3 3.2s normal; /*This animation plays 2st*/
 
+   
 }
 /*These lines are used to create box that will open up for the logo*/
 
 audio{
+    padding: -23px;
    position: absolute;
-   top: 500px;;
-   left: 1250px;
+   top: 610px;;
+   left: 1350px;
 }
 
 .move-up{
-    margin-top: 3%;
-    margin-left: 40%;
-    margin-right: 5%;
-    /*This is used to position the form e.g username and password form so essteinaly everything in the login box*/;
+    margin-top: 55%;
+    margin-left: 39.5%;
+  animation: input-form 3s normal; /*This animation plays 2st*/
+  animation-delay: 0.8s;
+animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
 
 
 
-#img-size{
-    transform: scale(0.2,0.2);
+#img-size-and-position{
+    transform: scale(0.288,0.288);
+    position: absolute;
+    top: -77px;
+    left: -470px;
+    animation: PhotoLogo 1.9s alternate;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
 }
 
 /*Animation section*/
-@keyframes ChangeNOW {
+@keyframes AnimationLine1 {
+   0%{width: 380px;}
+    50%{width: 80px;}
+    100%{width: 450px;}
+    /*This animation plays 1st*/
+}
+
+@keyframes AniH1 {
+    from{top:-30px;}
+    to{top: 130px; }
+    /*This animation plays 2rd*/
 
 }
 
+@keyframes input-form {
+    from{margin-top: 55%;}
+    to{margin-top: 27%;}
+        /*This animation plays 3rd*/
+}
+
+@keyframes  AnimationLine2{
+    0%{width: 380px;}
+    50%{width: 6px;}
+    100%{width: 450px;}
+  /*This animation plays 3rd*/
+}
+
+@keyframes AnimationLine3 {
+    0%{top: 125px; }
+    50%{top: 438px;  margin-left: 20px; /* Adjust the margin to decrease width in the opposite direction */
+    }
+    100%{top: 125px;}
+
+    /*This animation plays 4th*/
+}
+
+@keyframes PhotoLogo {
+    0%{left: -470px; ;}
+
+    100%{left:402px}
+}
+
+@keyframes AnimationLine4 {
+    0%{top: 125px;}
+    100%{top: -85;}
+}
 
 /*Animation section*/
